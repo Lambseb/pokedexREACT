@@ -1,7 +1,13 @@
 
-import PokeCard from './components/PokemonCard'
+import PokemonCard from './components/PokemonCard'
+import './App.css'
 const Card = () => {
-return (<div><PokeCard/></div>)
+return (
+    <div>
+        
+        <PokemonCard/>
+    </div>
+    )
 }
 
 export default Card
