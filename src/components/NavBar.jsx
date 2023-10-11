@@ -1,20 +1,9 @@
-function NavBar(useNav) {
-
-  const clickerUp = () => {
-    useNav.pokeSet(useNav.pokeUse + 1);
-  };
-  const clickerDown = () => {
-    useNav.pokeSet(useNav.pokeUse - 1);
-  };
+function NavBar({ pokeUse, poke, clickU, clickD }) {
   return (
     <>
-      {useNav.pokeUse > 0 ? (
-        <button onClick={clickerDown}>Précédent</button>
-      ) : (
-        false
-      )}
-      {useNav.pokeUse < useNav.poke.length - 1 ? (
-        <button onClick={clickerUp}>Suivant</button>
+      {pokeUse > 0 ? <button onClick={clickD}>Précédent</button> : false}
+      {pokeUse < poke.length - 1 ? (
+        <button onClick={clickU}>Suivant</button>
       ) : (
         false
       )}
